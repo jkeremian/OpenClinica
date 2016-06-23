@@ -202,7 +202,7 @@ public class RandomizeService extends RandomizationRegistrar {
         try {
             response = rest.exchange(randomiseUrl, HttpMethod.GET, request, String.class);
             body = response.getBody();
-            jsonObject = new JSONObject(body);
+            jsonObject = new JSONObject(body.trim());
             // if (!jsonObject.get("error").equals("0"))
             // jsonObject= null;
 
